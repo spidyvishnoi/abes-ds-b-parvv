@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 </head>
 <body>
     <form action="">
-        <label for="">student name</label>
+        <label for="action.gmail">student name</label>
         <input type="text"><br>
         <label for="password">student password</label>
         <input type="password" name="" id="">
@@ -22,7 +22,7 @@
         <br>
          <input type="radio" name="html" id="adi" value="html1">
         <label for="">Other</label>
-        <!--select-->
+        
         <br>
         <label for="">Select your city</label>
         <select name="" id="">
@@ -43,6 +43,114 @@
      <br>
       
       <input type="submit">
+      <br>
+      <label for="">Select your file</label>
+      <input type="file">
     </form>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Booking System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    .nav {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      background-color: #222;
+      color: #fff;
+    }
+    .nav img {
+      border-radius: 50%;
+      height: 40px;
+    }
+    .nav div {
+      margin-left: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    h1 {
+      background-color: chocolate;
+      padding: 15px;
+      color: white;
+      border-radius: 8px;
+      width: fit-content;
+    }
+    .form-container {
+      height: auto;
+      width: 400px;
+      background-color: rgb(134, 195, 134);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+    form label {
+      font-weight: bold;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #555;
+    }
+    button {
+      background-color: chocolate;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background-color: #b3541e;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <img src="icon.png" alt="Logo">
+    <div>BUS BOOK SEAT</div>
+  </div>
+
+  <center>
+    <h1>WELCOME TO BUS BOOKING SYSTEM</h1>
+    <div class="form-container">
+      <form action="">
+        <label for="username">User Detail</label>
+        <input type="text" id="username" placeholder="Enter your name">
+
+        <label for="password">User Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+
+        <label>User Gender:</label><br>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label><br>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="city">Select City</label>
+        <select id="city">
+          <option value="Meerut">Meerut</option>
+          <option value="Goa">Goa</option>
+          <option value="Ghaziabad">Ghaziabad</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+
+        <center><button type="submit">Book Seat</button></center>
+      </form>
+    </div>
+  </center>
 </body>
 </html>
