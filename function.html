@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: chartreuse;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
+
+    <div id="box">
+         <button onclick="abes()">click</button>
+         <p id="aaa"></p>
+    </div>
     <script>
-         function abes(){
+         /* //function abes(){
             document.writeln("Python programming");
 
         }
-        abes(); 
-        let a = 23;
+        abes();  */
+       /* let a = 23;
         let  b = 34;
 
         function add(){
             document.writeln(a+b);
         }
-        add();
+        add();*/
+       function abes(){
+        document.getElementById("aaa").innerHTML="<h1> HELLO </h1>";
+       }
+       
     </script>
 </body>
 </html>
