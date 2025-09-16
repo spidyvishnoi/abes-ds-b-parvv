@@ -113,44 +113,83 @@
       cursor: pointer;
       margin-top: 15px;
     }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    #abc {
+      font-size: 40px;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:first-of-type {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    button:last-of-type {
+      background-color: #f44336;
+      color: white;
+    }
+
     button:hover {
-      background-color: #b3541e;
+      opacity: 0.9;
     }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <img src="icon.png" alt="Logo">
-    <div>BUS BOOK SEAT</div>
-  </div>
+  <h1>Counter App</h1>
+  <h1 id="abc">0</h1>
 
-  <center>
-    <h1>WELCOME TO BUS BOOKING SYSTEM</h1>
-    <div class="form-container">
-      <form action="">
-        <label for="username">User Detail</label>
-        <input type="text" id="username" placeholder="Enter your name">
+  <button onclick="add()">+</button>
+  <button onclick="sub()">-</button>
 
-        <label for="password">User Password</label>
-        <input type="password" id="password" placeholder="Enter password">
+  <script>
+    let count = 0;
+    let max = 10;
+    let min = -1;
 
-        <label>User Gender:</label><br>
-        <input type="radio" name="gender" id="male">
-        <label for="male">Male</label><br>
-        <input type="radio" name="gender" id="female">
-        <label for="female">Female</label><br><br>
+    function add() {
+      if (count < max) {
+        count++;
+        document.getElementById("abc").textContent = count;
+      } else {
+        alert("maximum limit reached");
+      }
+    }
 
-        <label for="city">Select City</label>
-        <select id="city">
-          <option value="Meerut">Meerut</option>
-          <option value="Goa">Goa</option>
-          <option value="Ghaziabad">Ghaziabad</option>
-          <option value="Delhi">Delhi</option>
-        </select>
-
-        <center><button type="submit">Book Seat</button></center>
-      </form>
-    </div>
-  </center>
+    function sub() {
+      if (count > min) {
+        count--;
+        document.getElementById("abc").textContent = count;
+      } else {
+        alert("minimum limit reached");
+      }
+    }
+  </script>
 </body>
 </html>

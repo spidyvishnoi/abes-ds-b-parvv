@@ -10,28 +10,29 @@
     </style>
     <title>Document</title>
 </head>
-<body>
+<body id="adi">
 
-    <div id="box">
-         <button onclick="abes()">click</button>
-         <p id="aaa"></p>
-    </div>
+    
+         <button  onclick="red()">red</button>
+          <button  onclick="green()">green</button>
+           <button  onclick="blue()">blue</button>
+         
+    
     <script>
-         /* //function abes(){
-            document.writeln("Python programming");
+       function red() {
+    document.getElementById("adi").style.backgroundColor = "red";
+}
 
-        }
-        abes();  */
-       /* let a = 23;
-        let  b = 34;
+function green() {
+    document.getElementById("adi").style.backgroundColor = "green";
 
-        function add(){
-            document.writeln(a+b);
-        }
-        add();*/
-       function abes(){
-        document.getElementById("aaa").innerHTML="<h1> HELLO </h1>";
-       }
+}
+function blue() {
+    document.getElementById("adi").style.backgroundColor = "blue";
+}
+
+   
+      
        
     </script>
 </body>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h1>Counter App</h1></center>
+   <br>
+   <br>
+
+    <center><h1 id="abc">0</h1></center>
+
+    <button onclick="add()"  >+</button>  
+    <button onclick="sub()" >-</button>
+    <script>
+        let count =0;
+        let max =10;
+        let min = -1;
+        function add(){
+        if(count <max){
+            count++;
+         document.getElementById("abc").innerHTML=count;
+        }
+    
+         else{
+            alert("maximum limit reached");
+         }
+        }
+            
+              function sub(){
+                if(count>min){
+                count--;
+                document.getElementById("abc").innerHTML=count;
+                }
+                else{
+                    alert("minimum limit reached");
+                }
+              }
+            
+          
+
+
+
+    </script>
+</body>
+</html>
