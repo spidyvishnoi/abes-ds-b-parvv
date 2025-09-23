@@ -1,195 +1,45 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Detail</title>
 </head>
 <body>
-    <form action="">
-        <label for="action.gmail">student name</label>
-        <input type="text"><br>
-        <label for="password">student password</label>
-        <input type="password" name="" id="">
-        <br>
-        <br>
-        <label for="">Gender</label><br>
-        <input type="radio" name="html" id="adi" value="html1">
-        <label for="">Male</label>
-        <br>
-         <input type="radio" name="html" id="adi" value="html1">
-        <label for="">Female</label>
-        <br>
-         <input type="radio" name="html" id="adi" value="html1">
-        <label for="">Other</label>
-        
-        <br>
-        <label for="">Select your city</label>
-        <select name="" id="">
-            <option value="">Meerut</option>
-            <option value="">GOA</option>
-            <option value="">GZB</option>
-            <option value="">Delhi</option>
-        </select>
-      <br>
-      <label for="">Class 10</label>
-      <input type="checkbox"><br>
-      <label for="">Class 12</label>
-      <input type="checkbox"><br>
-      <label for="">Btech</label>
-      <input type="checkbox"><br>
-      <label for="">Mtech</label>
-      <input type="checkbox">
-     <br>
-      
-      <input type="submit">
-      <br>
-      <label for="">Select your file</label>
-      <input type="file">
-    </form>
-</body>
-</html> -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bus Booking System</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
-    .nav {
-      height: 80px;
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-      background-color: #222;
-      color: #fff;
-    }
-    .nav img {
-      border-radius: 50%;
-      height: 40px;
-    }
-    .nav div {
-      margin-left: 10px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-    h1 {
-      background-color: chocolate;
-      padding: 15px;
-      color: white;
-      border-radius: 8px;
-      width: fit-content;
-    }
-    .form-container {
-      height: auto;
-      width: 400px;
-      background-color: rgb(134, 195, 134);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-    }
-    form label {
-      font-weight: bold;
-    }
-    form input, form select {
-      width: 100%;
-      padding: 8px;
-      margin: 8px 0;
-      border-radius: 5px;
-      border: 1px solid #555;
-    }
-    button {
-      background-color: chocolate;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Counter App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-      background-color: #f5f5f5;
-    }
+    <h1>Student Detail</h1>
+    <div id="adi"></div>
 
-    h1 {
-      margin: 20px 0;
-    }
+    <script>
+        class Student {
+            constructor(name, cls, branch, rollno) {
+                this.name = name;
+                this.cls = cls;
+                this.branch = branch;
+                this.rollno = rollno;
+            }
 
-    #abc {
-      font-size: 40px;
-      margin: 20px 0;
-      color: #333;
-    }
+            // method to return details as string
+            getDetails() {
+                return `Name: ${this.name}, Class: ${this.cls}, Branch: ${this.branch}, Roll No: ${this.rollno}`;
+            }
+        }
 
-    button {
-      font-size: 20px;
-      padding: 10px 20px;
-      margin: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+        const s1 = new Student("Parv", "B.Tech", "DS", 12);
+        const s2 = new Student("Monu", "B.Tech", "IT", 13);
+        const s3 = new Student("Isha", "B.Tech", "IT", 14);
+        const s4 = new Student("Harsh", "B.Tech", "ML", 15);
+        const s5 = new Student("Ria", "B.Tech", "CS", 16);
 
-    button:first-of-type {
-      background-color: #4CAF50;
-      color: white;
-    }
+        // store all students in array
+        const students = [s1, s2, s3, s4, s5];
 
-    button:last-of-type {
-      background-color: #f44336;
-      color: white;
-    }
+        // display all students in HTML
+        let output = "";
+        students.forEach(stu => {
+            output += `<p>${stu.getDetails()}</p>`;
+        });
 
-    button:hover {
-      opacity: 0.9;
-    }
-  </style>
-</head>
-<body>
-  <h1>Counter App</h1>
-  <h1 id="abc">0</h1>
-
-  <button onclick="add()">+</button>
-  <button onclick="sub()">-</button>
-
-  <script>
-    let count = 0;
-    let max = 10;
-    let min = -1;
-
-    function add() {
-      if (count < max) {
-        count++;
-        document.getElementById("abc").textContent = count;
-      } else {
-        alert("maximum limit reached");
-      }
-    }
-
-    function sub() {
-      if (count > min) {
-        count--;
-        document.getElementById("abc").textContent = count;
-      } else {
-        alert("minimum limit reached");
-      }
-    }
-  </script>
+        document.getElementById("adi").innerHTML = output;
+    </script>
 </body>
 </html>
