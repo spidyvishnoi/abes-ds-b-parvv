@@ -7,10 +7,13 @@
 </head>
 <body>
     <script>
-        let abes =()=>{
-            return "hello";
-        }
-        document.writeln(abes());
+        function sum(a,b){
+        console.log(a+b);
+    }
+    function cal(a,b,sumcallback){
+        sumcallback(a,b);
+    }
+    cal(10,20,sum);
     </script>
 </body>
 </html>

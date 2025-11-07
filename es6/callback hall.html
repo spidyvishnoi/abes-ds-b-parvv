@@ -7,10 +7,15 @@
 </head>
 <body>
     <script>
-        let abes =()=>{
-            return "hello";
-        }
-        document.writeln(abes());
+        function getdata(dataid){
+        setTimeout(()=>{
+            console.log("data",dataid);
+        },2000);
+    }
+    getdata(1);
+    getdata(2);
+    getdata(3);
+
     </script>
 </body>
 </html>
